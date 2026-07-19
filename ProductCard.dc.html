@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+
+<helmet>
+  <link rel="stylesheet" href="_ds/bliss-bin-design-system-1a467efa-b0d0-4fd3-b91a-5a09c19046fa/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/bliss-bin-design-system-1a467efa-b0d0-4fd3-b91a-5a09c19046fa/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/bliss-bin-design-system-1a467efa-b0d0-4fd3-b91a-5a09c19046fa/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/bliss-bin-design-system-1a467efa-b0d0-4fd3-b91a-5a09c19046fa/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/bliss-bin-design-system-1a467efa-b0d0-4fd3-b91a-5a09c19046fa/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/bliss-bin-design-system-1a467efa-b0d0-4fd3-b91a-5a09c19046fa/tokens/shadows.css">
+  <link rel="stylesheet" href="_ds/bliss-bin-design-system-1a467efa-b0d0-4fd3-b91a-5a09c19046fa/tokens/motion.css">
+  <link rel="stylesheet" href="_ds/bliss-bin-design-system-1a467efa-b0d0-4fd3-b91a-5a09c19046fa/styles.css">
+  <script src="_ds/bliss-bin-design-system-1a467efa-b0d0-4fd3-b91a-5a09c19046fa/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+</helmet>
+<div onClick="{{ onClick }}" style="background:var(--surface);border-radius:var(--radius-card);border:1px solid var(--border-subtle);overflow:hidden;font-family:var(--font-body);cursor:pointer;height:100%;display:flex;flex-direction:column">
+  <div style="position:relative;aspect-ratio:1/1">
+    <image-slot id="{{ imgId }}" src="{{ imgSrc }}" placeholder="{{ productName }}" style="width:100%;height:100%;display:block"></image-slot>
+    <sc-if value="{{ badge }}"><span style="position:absolute;top:10px;left:10px;padding:3px 10px;border-radius:var(--radius-full);background:var(--gilt-500);color:var(--forest-900);font-size:12px;font-weight:600">{{ badge }}</span></sc-if>
+    <button aria-label="Toggle wishlist" onClick="{{ onWishlist }}" style="position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.85);color:var(--forest-700);font-size:15px;display:flex;align-items:center;justify-content:center">{{ wishlistIcon }}</button>
+    <button aria-label="Quick view" onClick="{{ onQuickView }}" style="position:absolute;top:48px;right:10px;width:32px;height:32px;border-radius:50%;border:none;cursor:pointer;background:rgba(255,255,255,0.85);color:var(--forest-700);font-size:13px;display:flex;align-items:center;justify-content:center">⊙</button>
+  </div>
+  <div style="padding:14px 16px 16px;display:flex;flex-direction:column;flex:1">
+    <div style="font-size:14px;font-weight:600;color:var(--text-primary);margin-bottom:4px">{{ productName }}</div>
+    <div style="font-size:12px;color:var(--gilt-600);margin-bottom:6px">{{ ratingStars }} <span style="color:var(--text-tertiary)">({{ ratingValue }})</span></div>
+    <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:12px">
+      <span style="font-size:16px;font-weight:700;color:var(--text-primary)">{{ price }}</span>
+      <sc-if value="{{ originalPrice }}"><span style="font-size:13px;color:var(--text-tertiary);text-decoration:line-through">{{ originalPrice }}</span></sc-if>
+    </div>
+    <button onClick="{{ onQuickAdd }}" style="margin-top:auto;width:100%;padding:9px 0;border-radius:var(--radius-control);border:1px solid var(--border-strong);background:transparent;color:var(--color-primary);font-family:var(--font-body);font-size:var(--text-button-size);font-weight:600;cursor:pointer;transition:var(--motion-hover)">Quick Add</button>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:280,&quot;height&quot;:380},&quot;productName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Diwali Deluxe Hamper&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;price&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;₹4,200&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;originalPrice&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;badge&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;ratingStars&quot;:{&quot;editor&quot;:null,&quot;default&quot;:&quot;★★★★★&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;ratingValue&quot;:{&quot;editor&quot;:null,&quot;default&quot;:&quot;4.8&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;imgId&quot;:{&quot;editor&quot;:null,&quot;default&quot;:&quot;p1&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;imgSrc&quot;:{&quot;editor&quot;:null,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;wishlistIcon&quot;:{&quot;editor&quot;:null,&quot;default&quot;:&quot;♡&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;onClick&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;() =&gt; void&quot;},&quot;onWishlist&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;(e) =&gt; void&quot;},&quot;onQuickAdd&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;(e) =&gt; void&quot;},&quot;onQuickView&quot;:{&quot;editor&quot;:null,&quot;tsType&quot;:&quot;(e) =&gt; void&quot;}}"></script>
+</body>
+</html>
