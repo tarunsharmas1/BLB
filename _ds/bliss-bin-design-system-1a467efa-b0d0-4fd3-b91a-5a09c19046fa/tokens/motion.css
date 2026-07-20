@@ -1,0 +1,23 @@
+/* Bliss Bin — Motion. Gift-unwrapping should feel unhurried and considered: eases are
+   gentle (no bounce, no overshoot on utility UI), durations skew slightly longer than a
+   typical SaaS app to preserve the "unwrap, don't rush" brand feeling. */
+:root{
+--duration-instant:80ms; /* @kind other */
+--duration-fast:150ms; /* @kind other */
+--duration-base:220ms; /* @kind other */
+--duration-slow:340ms; /* @kind other */
+--duration-deliberate:500ms; /* @kind other */
+
+--ease-standard:cubic-bezier(.4,0,.2,1); /* @kind other */
+--ease-decelerate:cubic-bezier(0,0,.2,1); /* @kind other */
+--ease-accelerate:cubic-bezier(.4,0,1,1); /* @kind other */
+--ease-gift:cubic-bezier(.22,.61,.36,1); /* @kind other */
+
+--motion-hover:background-color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard);
+--motion-press:transform var(--duration-instant) var(--ease-standard);
+--motion-entrance:opacity var(--duration-slow) var(--ease-gift), transform var(--duration-slow) var(--ease-gift);
+--motion-page:opacity var(--duration-base) var(--ease-standard);
+}
+@media (prefers-reduced-motion: reduce){
+*{animation-duration:0.001ms !important;animation-iteration-count:1 !important;transition-duration:0.001ms !important;scroll-behavior:auto !important}
+}

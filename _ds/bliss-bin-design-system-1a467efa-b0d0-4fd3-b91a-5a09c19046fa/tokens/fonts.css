@@ -1,0 +1,12 @@
+/* Bliss Bin — Webfonts.
+   NOTE: no brand font files were supplied with the source logo, only a raster mark.
+   These are Google Fonts substitutes chosen to match the logo's serif display letterforms
+   and an approachable humanist body face. Flagged in readme.md — replace with licensed
+   brand fonts if/when supplied. */
+@import url('https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root{
+--font-display:'Petrona', 'Iowan Old Style', 'Palatino Linotype', ui-serif, serif;
+--font-body:'Public Sans', -apple-system, 'Segoe UI', ui-sans-serif, sans-serif;
+--font-mono:'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+}

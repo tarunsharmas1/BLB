@@ -1,0 +1,34 @@
+/* Bliss Bin — 4px base spacing scale. Fine 4px increments at small sizes (control padding,
+   icon gaps) coarsening to 8px steps past 24px (layout rhythm) so numbers stay memorable
+   at the scale designers actually use them. */
+:root{
+--space-0:0px;
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:20px;
+--space-6:24px;
+--space-7:32px;
+--space-8:40px;
+--space-9:48px;
+--space-10:64px;
+--space-11:80px;
+--space-12:96px;
+--space-13:128px;
+--space-14:160px;
+
+/* Semantic aliases */
+--space-component-xs:var(--space-1);
+--space-component-sm:var(--space-2);
+--space-component-md:var(--space-4);
+--space-component-lg:var(--space-6);
+--space-stack-sm:var(--space-4);
+--space-stack-md:var(--space-7);
+--space-stack-lg:var(--space-10);
+--space-section-sm:var(--space-11);
+--space-section-md:var(--space-12);
+--space-section-lg:var(--space-14);
+--space-container-padding:var(--space-6);
+--space-container-padding-lg:var(--space-9);
+}
