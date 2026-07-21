@@ -1,0 +1,24 @@
+{
+  "appId": "com.blissbin.app",
+  "appName": "Bliss Bin",
+  "webDir": "www",
+  "backgroundColor": "#faf6f0",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 900,
+      "backgroundColor": "#243c26",
+      "showSpinner": false,
+      "androidScaleType": "CENTER_CROP"
+    },
+    "StatusBar": {
+      "style": "LIGHT",
+      "backgroundColor": "#243c26"
+    }
+  },
+  "android": {
+    "allowMixedContent": false
+  },
+  "ios": {
+    "contentInset": "always"
+  }
+}

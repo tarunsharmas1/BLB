@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Generated web bundle (rebuild with `npm run copy:web`)
+www/
+
+# Generated native platform projects (recreate with `npx cap add android` / `ios`).
+# These are reproducible from the storefront + capacitor.config.json, so they are
+# kept out of git. Commit them instead if you add native customizations (icons,
+# splash art, Info.plist / AndroidManifest edits) you want version-controlled.
+android/
+ios/
+
+# Misc
+.DS_Store
+*.log
